@@ -1,0 +1,23 @@
+﻿@model DesignPattern.CQRS.PresentationLayer.CQRS.Commands.PersonCommands.CreatePersonCommand
+@{
+    Layout = null;
+}
+<br />
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <form method="post">
+        <label>Personel Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <label>Personel Soyadı</label>
+        <input type="text" asp-for="Surname" class="form-control" />
+        <br />
+        <label>Personel Şehri</label>
+        <input type="text" asp-for="City" class="form-control" />
+        <br />
+        <label>Personel Maaşı</label>
+        <input type="text" asp-for="Salary" class="form-control" />
+        <br />
+        <button class="btn btn-outline-primary">Personeli Kaydet</button>
+    </form>
+</div>

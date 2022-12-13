@@ -1,0 +1,27 @@
+﻿@model List<DesignPattern.CQRS.PresentationLayer.CQRS.Results.GetProductPlannerQueryResult>
+@{
+    Layout = null;
+}
+<br />
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Ürün Adı</th>
+            <th>Minimum Stok</th>
+            <th>Maksimum Stok</th>
+            <th>Ürün Durumu</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.ProductName</td>
+                <td>@item.ProductMinStock</td>
+                <td>@item.ProductMaxStock</td>
+                <td>@item.ProductStatus</td>
+            </tr>
+        }
+    </table>
+</div>

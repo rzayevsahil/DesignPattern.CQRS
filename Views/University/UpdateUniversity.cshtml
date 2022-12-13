@@ -1,0 +1,32 @@
+﻿@model DesignPattern.CQRS.PresentationLayer.CQRS.Results.UniversityResult.GetUniversityUpdateByIDQueryResult
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<br />
+
+<div class="container">
+    <form method="post">
+        <label>Üniversite ID</label>
+        <input type="text" class="form-control" asp-for="UniversityID" />
+        <br />
+        <label>Üniversite Adı</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <br />
+        <label>Şehri</label>
+        <input type="text" class="form-control" asp-for="City" />
+        <br />
+        <label>Nüfus</label>
+        <input type="text" class="form-control" asp-for="Population" />
+        <br />
+        <label>Ülke</label>
+        <input type="text" class="form-control" asp-for="Country" />
+        <br />
+        <label>Bölge</label>
+        <input type="text" class="form-control" asp-for="Region" />
+        <br />
+        <button class="btn btn-outline-success">Bilgileri Güncelle</button>
+    </form>
+</div>

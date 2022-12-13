@@ -1,0 +1,29 @@
+﻿@model List<DesignPattern.CQRS.PresentationLayer.CQRS.Results.UniversityResult.GetAllUniversityQueryResult>
+@{
+    Layout = null;
+}
+<br />
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Üniversite</th>
+            <th>Şehir</th>
+            <th>Detaylar</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UniversityID</td>
+                <td>@item.Name</td>
+                <td>@item.City</td>
+                <td><a href="/University/GetUniversity/@item.UniversityID" class="btn btn-outline-dark">Detaylar</a></td>
+                <td><a href="/University/DeleteUniversity/@item.UniversityID" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="/University/UpdateUniversity/@item.UniversityID" class="btn btn-outline-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+</div>
