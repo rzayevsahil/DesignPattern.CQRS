@@ -13,6 +13,7 @@ using DesignPattern.CQRS.PresentationLayer.DAL.Concrete;
 using DesignPattern.CQRS.PresentationLayer.CQRS.Handlers;
 using DesignPattern.CQRS.PresentationLayer.CQRS.Handlers.PersonHandlers;
 using DesignPattern.CQRS.PresentationLayer.CQRS.Handlers.UniversityHandlers;
+using MediatR;
 
 namespace DesignPattern.CQRS.PresentationLayer
 {
@@ -41,6 +42,8 @@ namespace DesignPattern.CQRS.PresentationLayer
             services.AddScoped<RemoveUniversityHandler>();
             services.AddScoped<GetUniversityUpdateByIDQueryHandler>();
             services.AddScoped<UpdateUniversityHandler>();
+
+            services.AddMediatR(typeof(Startup));
 
 
             services.AddControllersWithViews();
